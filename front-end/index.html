@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>404-chat</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    #messages {
+      list-style-type: none;
+      background-color: #ecf0f1;
+      color: #2c3e50;
+      min-height: 250px;
+      height: 70%;
+      overflow: scroll;
+      text-align: left;
+    }
+    .container {
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .name {
+      font-weight: bold;
+    }
+    form label,input,p,button {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Sholok's 404 Chat</h1>
+    <ul id="messages"></ul>
+    <form class="pure-form pure-form-aligned">
+      <label for="message">Message</label>
+      <input class="pure-input-2-3" type="text" id="myMessage" required>
+      <button type="submit" class="pure-button pure-button-primary" id="sendbutton">Send</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
